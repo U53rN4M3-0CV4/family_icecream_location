@@ -4,7 +4,7 @@
 const APP_CONFIG = {
     MAP_ID: 'map',
     DATA_URL: 'stores.json',
-    DEFAULT_CENTER: [25.0330, 121.5654],
+    DEFAULT_CENTER: [25.0320, 121.5143],
     DEFAULT_ZOOM: 13,
     TILE_LAYER: {
         URL: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
@@ -252,9 +252,9 @@ class MapController {
             bounds.push([store.latitude, store.longitude]);
         });
 
-        if (bounds.length > 0 && !this.hasUserLocation) {
-            this.map.fitBounds(bounds, { padding: [50, 50] });
-        }
+        // if (bounds.length > 0 && !this.hasUserLocation) {
+        //     this.map.fitBounds(bounds, { padding: [50, 50] });
+        // }
     }
 
     _createPopupContent(store) {
